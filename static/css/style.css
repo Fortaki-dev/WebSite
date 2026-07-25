@@ -1,21 +1,21 @@
 /* Шрифты (локальные) */
 @font-face {
     font-family: 'Esenin script two';
-    src: url("/static/fonts/Esenin_script_two.ttf") format('truetype');
+    src: url("./static/fonts/Esenin_script_two.ttf") format('truetype');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Esenin script two';
-    src: url("/static/fonts/Esenin_script_two.ttf") format('truetype');
+    src: url("./static/fonts/Esenin_script_two.ttf") format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Esenin script two';
-    src: url("/static/fonts/Esenin_script_two.ttf") format('truetype');
+    src: url("./static/fonts/Esenin_script_two.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -23,7 +23,7 @@
 
 @font-face {
     font-family: 'EFN Absolut';
-    src: url("/static/fonts/EFN_Absolut.ttf") format('truetype');
+    src: url("./static/fonts/EFN_Absolut.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
