@@ -5,38 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
     <title>Кыз Узатуу — Айдай</title>
 
+    <!-- Google Fonts (заменяем локальные шрифты) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
     <style>
-        /* ---------- ПОДКЛЮЧЕНИЕ ЛОКАЛЬНЫХ ШРИФТОВ ---------- */
-        @font-face {
-            font-family: 'Esenin script two';
-            src: url('./Esenin_script_two.ttf') format('truetype');
-            font-weight: 100;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Esenin script two';
-            src: url('./Esenin_script_two.ttf') format('truetype');
-            font-weight: 300;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Esenin script two';
-            src: url('./Esenin_script_two.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'EFN Absolut';
-            src: url('./EFN_Absolut.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-
         /* ---------- БАЗОВЫЕ СТИЛИ (адаптивные, компактные) ---------- */
         * {
             margin: 0;
@@ -48,11 +22,12 @@
             -webkit-font-smoothing: antialiased;
         }
         body {
-            font-family: 'EFN Absolut', 'Cormorant Garamond', Georgia, serif;
+            font-family: 'Inter', 'Cormorant Garamond', serif;
             background: #f7e6e6;
             color: #1A1A1A;
             line-height: 1.6;
             overflow-x: hidden;
+            /* Упрощённый фон – без тяжёлого SVG-орнамента, но с лёгким узором */
             background-image:
                 repeating-linear-gradient(45deg,
                     transparent, transparent 40px,
@@ -64,6 +39,7 @@
                 radial-gradient(ellipse at 80% 70%, rgba(245,210,210,0.4) 0%, transparent 60%);
             background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
         }
+        /* Плавающие пятна (лёгкие) */
         body::before, body::after {
             content: '';
             position: fixed;
@@ -126,9 +102,8 @@
             align-items: center;
         }
         .logo {
-            font-family: 'Esenin script two', 'Great Vibes', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: 1.8rem;
-            font-weight: 100;
             color: #1A1A1A;
             text-decoration: none;
             letter-spacing: 2px;
@@ -138,7 +113,6 @@
             display: flex;
             gap: 24px;
             list-style: none;
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: 0.95rem;
             font-weight: 400;
             text-transform: uppercase;
@@ -229,7 +203,6 @@
             margin: 0 auto;
         }
         .hero-badge {
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: 1rem;
             letter-spacing: 5px;
             text-transform: uppercase;
@@ -238,16 +211,16 @@
             opacity: 0.7;
         }
         .hero-title {
-            font-family: 'Esenin script two', 'Great Vibes', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: clamp(4rem, 15vw, 7rem);
-            font-weight: 100;
+            font-weight: 400;
             line-height: 1;
             color: #1A1A1A;
             margin-bottom: 4px;
         }
         .hero-title span { color: #C9A84C; }
         .hero-sub {
-            font-family: 'EFN Absolut', 'Cormorant Garamond', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(1.8rem, 5vw, 2.8rem);
             font-weight: 300;
             letter-spacing: 4px;
@@ -260,7 +233,6 @@
             flex-wrap: wrap;
             gap: 16px 32px;
             margin: 20px 0 32px;
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: clamp(1rem, 2.5vw, 1.4rem);
             color: #2A2A2A;
             opacity: 0.8;
@@ -278,7 +250,6 @@
             color: #1A1A1A;
             padding: 14px 48px;
             border-radius: 50px;
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: 1.1rem;
             font-weight: 500;
             text-decoration: none;
@@ -296,7 +267,6 @@
         .btn-primary:active { transform: scale(0.96); }
         .hero-footer-text {
             margin-top: 30px;
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: clamp(1rem, 3vw, 1.4rem);
             font-weight: 300;
             color: #4A4A4A;
@@ -315,15 +285,14 @@
             backdrop-filter: blur(2px);
         }
         .section-title {
-            font-family: 'Esenin script two', 'Great Vibes', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: clamp(2.8rem, 7vw, 4.2rem);
-            font-weight: 100;
+            font-weight: 400;
             text-align: center;
             color: #1A1A1A;
             margin-bottom: 8px;
         }
         .section-subtitle {
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             text-align: center;
             font-size: clamp(1.1rem, 2.5vw, 1.6rem);
             font-weight: 300;
@@ -354,26 +323,25 @@
             position: relative;
         }
         .bride-image .placeholder {
-            font-family: 'Esenin script two', 'Great Vibes', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: clamp(3rem, 6vw, 5rem);
             color: #C9A84C;
         }
         .bride-image .monogram {
             position: absolute;
             bottom: 20px; right: 24px;
-            font-family: 'Esenin script two', 'Great Vibes', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: 3rem;
             color: rgba(201,168,76,0.2);
         }
         .bride-text h2 {
-            font-family: 'Esenin script two', 'Great Vibes', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: clamp(3rem, 6vw, 4.2rem);
-            font-weight: 100;
+            font-weight: 400;
             color: #1A1A1A;
             margin-bottom: 2px;
         }
         .bride-text .subhead {
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: clamp(1rem, 2vw, 1.3rem);
             font-weight: 400;
             color: #A8892F;
@@ -382,14 +350,13 @@
             margin-bottom: 12px;
         }
         .bride-text p {
-            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(1rem, 1.6vw, 1.2rem);
             color: #2A2A2A;
             margin-bottom: 14px;
             opacity: 0.85;
         }
         .bride-text .quote {
-            font-family: 'Esenin script two', 'Great Vibes', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: clamp(1.8rem, 3.5vw, 2.6rem);
             color: #C9A84C;
             border-left: 3px solid #C9A84C;
@@ -419,7 +386,6 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.06);
         }
         .event-card .label {
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -427,13 +393,11 @@
             font-weight: 500;
         }
         .event-card .value {
-            font-family: 'EFN Absolut', 'Cormorant Garamond', serif;
             font-size: clamp(1.4rem, 3vw, 2rem);
-            font-weight: 400;
+            font-weight: 600;
             color: #1A1A1A;
         }
         .event-card .note {
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: 0.9rem;
             color: #4A4A4A;
             margin-top: 4px;
@@ -451,7 +415,6 @@
             border: 1px solid rgba(255,255,255,0.1);
         }
         .countdown-wrap .label {
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: 1rem;
             letter-spacing: 4px;
             text-transform: uppercase;
@@ -465,7 +428,6 @@
             flex-wrap: wrap;
         }
         .countdown-item .number {
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: clamp(2.8rem, 8vw, 4.2rem);
             font-weight: 300;
             line-height: 1;
@@ -473,7 +435,6 @@
             letter-spacing: 2px;
         }
         .countdown-item .unit {
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -498,7 +459,6 @@
             margin-top: 20px;
         }
         .map-placeholder .inner p {
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: clamp(1.2rem, 3vw, 1.8rem);
             opacity: 0.7;
         }
@@ -508,7 +468,6 @@
             font-size: clamp(1.6rem, 4vw, 2.4rem);
         }
         .venue-note {
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             text-align: center;
             margin-top: 16px;
             font-size: 1rem;
@@ -530,7 +489,6 @@
         }
         .form-group label {
             display: block;
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-weight: 500;
             font-size: 0.9rem;
             text-transform: uppercase;
@@ -543,10 +501,10 @@
             padding: 14px 18px;
             border-radius: 12px;
             border: 1px solid rgba(0,0,0,0.08);
-            font-family: 'EFN Absolut', 'Cormorant Garamond', serif;
             font-size: 1rem;
             background: rgba(255,255,255,0.5);
             transition: 0.3s;
+            font-family: inherit;
         }
         .form-group input[type="text"]:focus {
             outline: none;
@@ -564,7 +522,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-weight: 400;
             text-transform: none;
             opacity: 1;
@@ -580,12 +537,12 @@
             background: #C9A84C;
             border: none;
             border-radius: 50px;
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: 1.1rem;
             font-weight: 500;
             letter-spacing: 1px;
             cursor: pointer;
             transition: 0.3s;
+            font-family: inherit;
             box-shadow: 0 8px 30px rgba(201,168,76,0.25);
         }
         .btn-submit:hover {
@@ -595,7 +552,6 @@
         .btn-submit:active { transform: scale(0.96); }
         .privacy-note {
             text-align: center;
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
             font-size: 0.85rem;
             opacity: 0.5;
             margin-top: 12px;
@@ -608,10 +564,9 @@
             text-align: center;
             border-top: 1px solid rgba(255,255,255,0.1);
             backdrop-filter: blur(4px);
-            font-family: 'EFN Absolut', 'Inter', sans-serif;
         }
         .footer .brand {
-            font-family: 'Esenin script two', 'Great Vibes', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: 2rem;
             color: #C9A84C;
             opacity: 0.5;
@@ -725,7 +680,7 @@
     <section class="hero" id="home">
         <div class="hero-content fade-in-up">
             <div class="hero-badge">Куттуу чакыруу</div>
-            <h1 class="hero-title">Айдай <span>·</span></h1>
+            <h1 class="hero-title" style="font-size: 14rem; font-weight: 500;">Айдай <span>·</span></h1>
             <div class="hero-sub">Кыз Узатуу</div>
             <div class="hero-ornament">
                 <div class="ornament-large">
@@ -737,12 +692,12 @@
                 </div>
             </div>
             <div class="hero-details">
-                <span class="item">Дата: 17‑август, 2026</span>
-                <span class="item">Убакты: 17:00</span>
-                <span class="item">Дарек Бишкек</span>
+                <span class="item" style="font-size: 2rem; font-weight: 500;">Дата: 17‑август, 2026</span>
+                <span class="item" style="font-size: 2rem; font-weight: 500;">Убакты: 17:00</span>
+                <span class="item" style="font-size: 2rem; font-weight: 500;">Дарек Бишкек</span>
             </div>
-            <a href="#rsvp" class="btn-primary">Катышам</a>
-            <div class="hero-footer-text">Сизди чон кубаныч менен кутобуз!</div>
+            <a href="#rsvp" class="btn-primary" style="font-size: 2rem; font-weight: 500;">Катышам</a>
+            <div class="hero-footer-text" style="font-size: 2.6rem; font-weight: 500;">Сизди чон кубаныч менен кутобуз!</div>
         </div>
     </section>
 
@@ -790,8 +745,8 @@
                 <span class="ornament-flower">✿</span>
                 <span class="ornament-line"></span>
             </div>
-            <h2 class="section-title animate-on-scroll">Иш‑чара</h2>
-            <p class="section-subtitle animate-on-scroll">
+            <h2 class="section-title animate-on-scroll" style="font-size: 9rem; font-weight: 500;">Иш‑чара</h2>
+            <p class="section-subtitle animate-on-scroll" style="font-size: 2.6rem; font-weight: 500;">
                 Сизди ушул маанилуу кундо биз менен бирге болууга чакырабыз.
             </p>
             <div class="event-cards">
@@ -802,7 +757,7 @@
                 </div>
                 <div class="event-card animate-on-scroll">
                     <div class="label">Убактысы</div>
-                    <div class="value">18:00</div>
+                    <div class="value">17:00</div>
                     <div class="note">Кечки саат 6да башталат</div>
                 </div>
                 <div class="event-card animate-on-scroll">
@@ -829,8 +784,8 @@
                 <span class="ornament-flower">✿</span>
                 <span class="ornament-line"></span>
             </div>
-            <h2 class="section-title animate-on-scroll">Санак</h2>
-            <p class="section-subtitle animate-on-scroll">
+            <h2 class="section-title animate-on-scroll" style="font-size: 7rem; font-weight: 500;">Санак</h2>
+            <p class="section-subtitle animate-on-scroll" style="font-size: 2.6rem; font-weight: 500;">
                 Ушул маанилуу кунго чейин калган убакыт
             </p>
             <div class="countdown-wrap animate-on-scroll">
@@ -870,13 +825,13 @@
                 <span class="ornament-flower">✿</span>
                 <span class="ornament-line"></span>
             </div>
-            <h2 class="section-title animate-on-scroll">Дарек</h2>
-            <p class="section-subtitle animate-on-scroll">
+            <h2 class="section-title animate-on-scroll" style="font-size: 7rem; font-weight: 500;">Дарек</h2>
+            <p class="section-subtitle animate-on-scroll" style="font-size: 2.6rem; font-weight: 500;">
                 "Ала‑Тоо" рестораны — Бишкектин журогундо
             </p>
             <div class="map-placeholder animate-on-scroll">
                 <div class="inner">
-                    <p class="venue-name">Ала‑Тоо рестораны</p>
+                    <p class="venue-name" style="font-size: 2.5rem; font-weight: 500;">Ала‑Тоо рестораны</p>
                     <p>Чүй проспектиси 123, Бишкек</p>
                     <p>(Карта бул жерге кошулат)</p>
                 </div>
@@ -901,11 +856,11 @@
             </p>
             <form class="rsvp-form animate-on-scroll" id="rsvpForm">
                 <div class="form-group">
-                    <label for="name">Аты‑жөнүңүз</label>
+                    <label for="name">Аты‑жөнунуз</label>
                     <input type="text" id="name" placeholder="Мисалы: Айбек Асанов" required />
                 </div>
                 <div class="form-group">
-                    <label>Катышууңуз</label>
+                    <label>Катышуунуз</label>
                     <div class="radio-group">
                         <label>
                             <input type="radio" name="attendance" value="Приду" checked />
@@ -917,7 +872,7 @@
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="btn-submit">Жөнөтүү</button>
+                <button type="submit" class="btn-submit">Жонотуу</button>
                 <div class="privacy-note">Сиздин маалыматыңыз купуя сакталат</div>
             </form>
         </div>
@@ -934,7 +889,7 @@
                 <span class="ornament-line" style="background:linear-gradient(90deg,transparent,rgba(201,168,76,0.1),transparent);"></span>
             </div>
             <div class="brand">Айдай · Кыз Узатуу</div>
-            <div class="copy">© 2026 · Биз менен бирге болгонуңузга чоң рахмат!</div>
+            <div class="copy">© 2026 · Биз менен бирге болгонунузга чон рахмат!</div>
             <div style="margin-top:6px; font-size:0.85rem; opacity:0.4;">Кыргызстан · Бишкек</div>
         </div>
     </footer>
