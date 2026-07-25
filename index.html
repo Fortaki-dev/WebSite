@@ -791,7 +791,7 @@
                 <span class="ornament-flower">✿</span>
                 <span class="ornament-line"></span>
             </div>
-            <h2 class="section-title animate-on-scroll" style="font-size: 9rem; font-weight: 500;">Иш‑чара</h2>
+            <h2 class="section-title animate-on-scroll" style="font-size: 7rem; font-weight: 500;">Иш‑чара</h2>
             <p class="section-subtitle animate-on-scroll" style="font-size: 2.6rem; font-weight: 500;">
                 Сизди ушул маанилуу кундо биз менен бирге болууга чакырабыз.
             </p>
@@ -945,29 +945,54 @@
         (function() {
             "use strict";
 
-            // ---------- БУРГЕР ----------
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementById('navLinks');
-            if (hamburger && navLinks) {
-                hamburger.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    this.classList.toggle('active');
-                    navLinks.classList.toggle('open');
-                });
-                navLinks.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', function() {
-                        hamburger.classList.remove('active');
-                        navLinks.classList.remove('open');
-                    });
-                });
-                document.addEventListener('click', function(e) {
-                    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-                        hamburger.classList.remove('active');
-                        navLinks.classList.remove('open');
-                    }
-                });
-            }
+// ---------- БУРГЕР С ОВЕРЛЕЕМ ----------
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('menu-overlay');
 
+        function toggleMenu(open) {
+            if (open === undefined) {
+                const isOpen = navLinks.classList.contains('open');
+                open = !isOpen;
+            }
+            if (open) {
+                navLinks.classList.add('open');
+                hamburger.classList.add('active');
+                overlay.classList.add('active');
+                document.body.classList.add('no-scroll');
+            } else {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
+        }
+
+        if (hamburger && navLinks && overlay) {
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleMenu();
+            });
+
+    // Закрытие по клику на оверлей
+            overlay.addEventListener('click', function() {
+                toggleMenu(false);
+            });
+
+    // Закрытие по клику на ссылку в меню
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    toggleMenu(false);
+                });
+            });
+
+    // Закрытие по клавише Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+                    toggleMenu(false);
+                }
+            });
+        }
             // ---------- ТАЙМЕР (17 августа 2026 17:00) ----------
             const targetDate = new Date('2026-08-17T17:00:00+06:00').getTime();
             const daysEl = document.getElementById('days');
