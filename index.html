@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кыз Узатуу — Айдай</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+    <!-- ПОДПИСЬ РАЗРАБОТЧИКА -->
+    <div class="developer-credit">
+        <span>By <a href="#" target="_blank">Fortaki</a> <span class="heart">❤</span></span>
+    </div>
+
+    <!-- Canvas для частиц (поверх всего фона) -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo" style="font-size: 1.8rem; font-weight: 500;">Айдай <span>·</span> Узатуу</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">Айдай жонундо</a></li>
+                <li><a href="#event">Иш-чара</a></li>
+                <li><a href="#countdown">Санак</a></li>
+                <li><a href="#venue">Дарек</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content fade-in-up">
+            <div class="hero-badge">Куттуу чакыруу</div>
+            <h1 class="hero-title" style="font-size: 8rem; font-weight: 500;">Айдай <span>·</span></h1>
+            <div class="hero-sub">Кыз Узатуу</div>
+            <div class="hero-ornament">
+                <div class="ornament-large">
+                    <span class="line"></span>
+                    <span class="flower">✿</span>
+                    <span class="flower">❀</span>
+                    <span class="flower">✿</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="hero-details">
+                <span class="item" style="font-size: 2rem; font-weight: 500;">Дата: 17‑август, 2026</span>
+                <span class="item" style="font-size: 2rem; font-weight: 500;">Убатык: 17:00</span>
+                <span class="item" style="font-size: 2rem; font-weight: 500;">Дарек Бишкек</span>
+            </div>
+            <a href="#rsvp" class="btn-primary">Катышам</a>
+            <div class="hero-footer-text" style="font-size: 2.5rem; font-weight: 500;">Сизди чон кубаныч менен кутобуз!</div>
+        </div>
+    </section>
+
+    <!-- ABOUT BRIDE -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="bride-grid">
+                <div class="bride-image animate-on-scroll">
+                    <span class="placeholder">✦ Айдай ✦</span>
+                    <span class="monogram">А</span>
+                </div>
+                <div class="bride-text animate-on-scroll">
+                    <div class="ornament" style="justify-content: flex-start;">
+                        <span class="ornament-line" style="flex:0 0 30px;"></span>
+                        <span class="ornament-flower">✿</span>
+                        <span class="ornament-flower">❀</span>
+                        <span class="ornament-flower">✿</span>
+                        <span class="ornament-line" style="flex:0 0 30px;"></span>
+                    </div>
+                    <h2>Айдай</h2>
+                    <div class="subhead" style="font-size: 1.5rem; font-weight: 500;">Кыз Узатуу — уйлонуу тою</div>
+                    <p>
+                        <strong>Айдай</strong> — ата‑энесинин сүйүктүү кызы, досторунун жаркын жылдызы.
+                        Ал жашоого толгон күлкү, акылмандык жана ырайымдуулук менен жүрөт.
+                        Бүгүн биз анын жаңы турмуштук жолуна чыгуусуна күбө болуу үчүн чогулуп жатабыз.
+                    </p>
+                    <p>
+                        Кыргыздын байыркы салты боюнча, <em>кыз узатуу</em> — кыздын ата‑энеси
+                        анын бактылуу келечегине батасын берип, коштошуу ырымы.
+                        Бул кечеде жылуу сөздөр, күлкү, көз жаш жана чексиз сүйүү биригет.
+                    </p>
+                    <div class="quote">Бактылуу бол, кызым!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENT -->
+    <section class="section section-alt" id="event">
+        <div class="container">
+            <div class="ornament">
+                <span class="ornament-line"></span>
+                <span class="ornament-flower">✿</span>
+                <span class="ornament-flower">❀</span>
+                <span class="ornament-flower">✿</span>
+                <span class="ornament-line"></span>
+            </div>
+            <h2 class="section-title animate-on-scroll">Иш‑чара</h2>
+            <p class="section-subtitle animate-on-scroll" style="font-size: 2rem; font-weight: 300;">
+                Сизди ушул маанилуу кундо биз менен бирге болууга чакырабыз.
+            </p>
+            <div class="event-cards">
+                <div class="event-card animate-on-scroll">
+                    <div class="label">Күнү</div>
+                    <div class="value">17‑август, 2026</div>
+                    <div class="note">Ишемби күнү</div>
+                </div>
+                <div class="event-card animate-on-scroll">
+                    <div class="label">Убактысы</div>
+                    <div class="value">18:00</div>
+                    <div class="note">Кечки саат 6да башталат</div>
+                </div>
+                <div class="event-card animate-on-scroll">
+                    <div class="label">Дареги</div>
+                    <div class="value">"Ала‑Тоо" рестораны</div>
+                    <div class="note">Бишкек, Чүй пр. 123</div>
+                </div>
+                <div class="event-card animate-on-scroll">
+                    <div class="label">Кийим</div>
+                    <div class="value">Салтанаттуу</div>
+                    <div class="note">Улуттук же европалык стиль</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section" id="countdown">
+        <div class="container">
+            <div class="ornament">
+                <span class="ornament-line"></span>
+                <span class="ornament-flower">✿</span>
+                <span class="ornament-flower">❀</span>
+                <span class="ornament-flower">✿</span>
+                <span class="ornament-line"></span>
+            </div>
+            <h2 class="section-title animate-on-scroll">Санак</h2>
+            <p class="section-subtitle animate-on-scroll" style="font-size: 2rem; font-weight: 300;">
+                Ушул маанилуу кунго чейин калган убакыт
+            </p>
+            <div class="countdown-wrap animate-on-scroll">
+                <div class="label">Кыз Узатууга чейин</div>
+                <div class="countdown-grid" id="countdownGrid">
+                    <div class="countdown-item">
+                        <div class="number" id="days">00</div>
+                        <div class="unit">Күн</div>
+                    </div>
+                    <span class="countdown-sep">:</span>
+                    <div class="countdown-item">
+                        <div class="number" id="hours">00</div>
+                        <div class="unit">Саат</div>
+                    </div>
+                    <span class="countdown-sep">:</span>
+                    <div class="countdown-item">
+                        <div class="number" id="minutes">00</div>
+                        <div class="unit">Мүнөт</div>
+                    </div>
+                    <span class="countdown-sep">:</span>
+                    <div class="countdown-item">
+                        <div class="number" id="seconds">00</div>
+                        <div class="unit">Секунд</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENUE / MAP -->
+    <section class="section section-alt" id="venue">
+        <div class="container">
+            <div class="ornament">
+                <span class="ornament-line"></span>
+                <span class="ornament-flower">✿</span>
+                <span class="ornament-flower">❀</span>
+                <span class="ornament-flower">✿</span>
+                <span class="ornament-line"></span>
+            </div>
+            <h2 class="section-title animate-on-scroll">Дарек</h2>
+            <p class="section-subtitle animate-on-scroll" style="font-size: 2rem; font-weight: 300;">
+                "Ала‑Тоо" рестораны — Бишкектин журогундо
+            </p>
+            <div class="map-placeholder animate-on-scroll">
+                <div class="inner">
+                    <p class="venue-name">Ала‑Тоо рестораны</p>
+                    <p>Чүй проспектиси 123, Бишкек</p>
+                    <p>(Карта бул жерге кошулат)</p>
+                </div>
+            </div>
+            <div class="venue-note">Унаа токтотуучу орундар камсыздалат</div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section" id="rsvp">
+        <div class="container">
+            <div class="ornament">
+                <span class="ornament-line"></span>
+                <span class="ornament-flower">✿</span>
+                <span class="ornament-flower">❀</span>
+                <span class="ornament-flower">✿</span>
+                <span class="ornament-line"></span>
+            </div>
+            <h2 class="section-title animate-on-scroll">RSVP</h2>
+            <p class="section-subtitle animate-on-scroll" style="font-size: 2.5rem; font-weight: 300;"ы>
+                Келеринби билдирип, бизди кубантыныз
+            </p>
+
+            <form class="rsvp-form animate-on-scroll" id="rsvpForm">
+                <div class="form-group">
+                    <label for="name">Аты‑жөнүңүз</label>
+                    <input type="text" id="name" placeholder="Мисалы: Айбек Асанов" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Катышууңуз</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="attendance" value="Приду" checked />
+                            Приду
+                        </label>
+                        <label>
+                            <input type="radio" name="attendance" value="Не приду" />
+                            Не приду
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Жөнөтүү</button>
+                <div class="privacy-note">Сиздин маалыматыңыз купуя сакталат</div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="ornament">
+                <span class="ornament-line" style="background:linear-gradient(90deg,transparent,rgba(201,168,76,0.1),transparent);"></span>
+                <span class="ornament-flower">✿</span>
+                <span class="ornament-flower">❀</span>
+                <span class="ornament-flower">✿</span>
+                <span class="ornament-line" style="background:linear-gradient(90deg,transparent,rgba(201,168,76,0.1),transparent);"></span>
+            </div>
+            <div class="brand">Айдай · Кыз Узатуу</div>
+            <div class="copy">© 2026 · Биз менен бирге болгонуңузга чоң рахмат!</div>
+            <div style="margin-top:6px; font-size:0.9rem; opacity:0.4; letter-spacing:1px; color:var(--dark-muted);">
+                Кыргызстан · Бишкек
+            </div>
+        </div>
+    </footer>
+
+    <!-- ОСНОВНОЙ СКРИПТ (бургер, таймер, форма + частицы) -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
