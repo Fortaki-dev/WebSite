@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <!-- Подключаем CSS (прямой путь) -->
+    <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
 
@@ -19,15 +20,15 @@
         <span>By <a href="#" target="_blank">Fortaki</a> <span class="heart">❤</span></span>
     </div>
 
-    <!-- Canvas для частиц (поверх всего фона) -->
+    <!-- Canvas для частиц -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="container header-inner">
-            <a href="#" class="logo" style="font-size: 1.8rem; font-weight: 500;">Айдай <span>·</span> Узатуу</a>
+            <a href="#" class="logo">Айдай <span>·</span> Узатуу</a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about">Айдай жонундо</a></li>
+                <li><a href="#about">Айдай жөнүндө</a></li>
                 <li><a href="#event">Иш-чара</a></li>
                 <li><a href="#countdown">Санак</a></li>
                 <li><a href="#venue">Дарек</a></li>
@@ -43,7 +44,7 @@
     <section class="hero" id="home">
         <div class="hero-content fade-in-up">
             <div class="hero-badge">Куттуу чакыруу</div>
-            <h1 class="hero-title" style="font-size: 8rem; font-weight: 500;">Айдай <span>·</span></h1>
+            <h1 class="hero-title">Айдай <span>·</span></h1>
             <div class="hero-sub">Кыз Узатуу</div>
             <div class="hero-ornament">
                 <div class="ornament-large">
@@ -55,12 +56,12 @@
                 </div>
             </div>
             <div class="hero-details">
-                <span class="item" style="font-size: 2rem; font-weight: 500;">Дата: 17‑август, 2026</span>
-                <span class="item" style="font-size: 2rem; font-weight: 500;">Убатык: 17:00</span>
-                <span class="item" style="font-size: 2rem; font-weight: 500;">Дарек Бишкек</span>
+                <span class="item">Дата: 17‑август, 2026</span>
+                <span class="item">Убакыт: 18:00</span>
+                <span class="item">Дарек: Бишкек, "Ала‑Тоо" рестораны</span>
             </div>
             <a href="#rsvp" class="btn-primary">Катышам</a>
-            <div class="hero-footer-text" style="font-size: 2.5rem; font-weight: 500;">Сизди чон кубаныч менен кутобуз!</div>
+            <div class="hero-footer-text">Сизди чоң кубаныч менен күтөбүз!</div>
         </div>
     </section>
 
@@ -81,7 +82,7 @@
                         <span class="ornament-line" style="flex:0 0 30px;"></span>
                     </div>
                     <h2>Айдай</h2>
-                    <div class="subhead" style="font-size: 1.5rem; font-weight: 500;">Кыз Узатуу — уйлонуу тою</div>
+                    <div class="subhead">Кыз Узатуу — үйлөнүү тою</div>
                     <p>
                         <strong>Айдай</strong> — ата‑энесинин сүйүктүү кызы, досторунун жаркын жылдызы.
                         Ал жашоого толгон күлкү, акылмандык жана ырайымдуулук менен жүрөт.
@@ -109,8 +110,8 @@
                 <span class="ornament-line"></span>
             </div>
             <h2 class="section-title animate-on-scroll">Иш‑чара</h2>
-            <p class="section-subtitle animate-on-scroll" style="font-size: 2rem; font-weight: 300;">
-                Сизди ушул маанилуу кундо биз менен бирге болууга чакырабыз.
+            <p class="section-subtitle animate-on-scroll">
+                Сизди ушул маанилүү күндө биз менен бирге болууга чакырабыз.
             </p>
             <div class="event-cards">
                 <div class="event-card animate-on-scroll">
@@ -148,8 +149,8 @@
                 <span class="ornament-line"></span>
             </div>
             <h2 class="section-title animate-on-scroll">Санак</h2>
-            <p class="section-subtitle animate-on-scroll" style="font-size: 2rem; font-weight: 300;">
-                Ушул маанилуу кунго чейин калган убакыт
+            <p class="section-subtitle animate-on-scroll">
+                Ушул маанилүү күнгө чейин калган убакыт
             </p>
             <div class="countdown-wrap animate-on-scroll">
                 <div class="label">Кыз Узатууга чейин</div>
@@ -189,8 +190,8 @@
                 <span class="ornament-line"></span>
             </div>
             <h2 class="section-title animate-on-scroll">Дарек</h2>
-            <p class="section-subtitle animate-on-scroll" style="font-size: 2rem; font-weight: 300;">
-                "Ала‑Тоо" рестораны — Бишкектин журогундо
+            <p class="section-subtitle animate-on-scroll">
+                "Ала‑Тоо" рестораны — Бишкектин жүрөгүндө
             </p>
             <div class="map-placeholder animate-on-scroll">
                 <div class="inner">
@@ -214,8 +215,8 @@
                 <span class="ornament-line"></span>
             </div>
             <h2 class="section-title animate-on-scroll">RSVP</h2>
-            <p class="section-subtitle animate-on-scroll" style="font-size: 2.5rem; font-weight: 300;"ы>
-                Келеринби билдирип, бизди кубантыныз
+            <p class="section-subtitle animate-on-scroll">
+                Келеринби билдирип, бизди кубантыңыз
             </p>
 
             <form class="rsvp-form animate-on-scroll" id="rsvpForm">
@@ -262,7 +263,7 @@
         </div>
     </footer>
 
-    <!-- ОСНОВНОЙ СКРИПТ (бургер, таймер, форма + частицы) -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <!-- Подключаем JS (прямой путь) -->
+    <script src="static/js/script.js"></script>
 </body>
 </html>
